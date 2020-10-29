@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a6939b5f-2c08-444f-ae09-5eadfa4f8d9a" name="site" url="https://www.doshermanos.gr/v2/">
+        <fileTransfer rootFolder="/wp-content/themes/dos" host="68.66.240.122" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

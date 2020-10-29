@@ -154,14 +154,6 @@ div#primary-menu {
     box-align: center;
 }
 
-
-ul {
-    list-style-type: none;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-
 .header-image img {
     width: 100%;
 }

@@ -193,4 +193,13 @@ if (defined('JETPACK__VERSION')) {
 
 require get_template_directory() . '/inc/features.php';
 
-//add_theme_support( 'custom-logo' );
+/**
+* Remove Gutenberg Editor except posts
+*/
+add_filter( 'use_block_editor_for_post_type', function( $use_block_editor, $post_type ) {
+
+	if ( $post_type !== 'post' ) { return false; }
+
+	return $use_block_editor;
+
+}, 10, 2);

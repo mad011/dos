@@ -165,6 +165,11 @@ add_action('widgets_init', 'dos_widgets_init');
  */
 
 /**
+ * Initialise ACF
+ */
+require get_template_directory() . '/inc/acf.php';
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

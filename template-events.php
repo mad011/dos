@@ -1,6 +1,7 @@
 
-<?php /* Template Name: Example Template */ ?>
+<?php
 
+/* Template Name: Events */
 
 get_header();
 ?>

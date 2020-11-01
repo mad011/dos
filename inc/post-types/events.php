@@ -29,7 +29,7 @@ if ( !function_exists( 'create_events' ) ) {
             'show_in_menu' => true,
             'query_var' => true,
             'show_in_rest' => true,
-            'rewrite' => array('slug' => 'events'),
+            'rewrite' => array('slug' => 'events', 'with_front' => false),
             'show_in_admin_bar' => false,
             'show_in_nav_menus' => true,
             'capability_type' => 'post',

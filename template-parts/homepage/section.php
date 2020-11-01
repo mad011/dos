@@ -29,7 +29,7 @@
                 <div class="row">
                     <div class="col-lg-3 p-0">
                         <div class="wrapper-image cuisine">
-                            <?php echo wp_get_attachment_image( $left_image, 'full' ); ?>
+                            <?php echo wp_get_attachment_image( $left_image, 'full', false, array('class'=>'img-fluid') ); ?>
                         </div>
                     </div>
                     <div class="col-lg-6 mt-5">
@@ -44,10 +44,10 @@
                     </div>
                     <div class="col-lg-3 mt-3">
                         <div class="wrapper-image cusine">
-                            <?php echo wp_get_attachment_image( $right_image_1, 'full' ); ?>
+                            <?php echo wp_get_attachment_image( $right_image_1, 'full', false, array('class'=>'img-fluid') ); ?>
                         </div>
                         <div class="wrapper-image move">
-                            <?php echo wp_get_attachment_image( $right_image_2, 'full' ); ?>
+                            <?php echo wp_get_attachment_image( $right_image_2, 'full', false, array('class'=>'img-fluid') ); ?>
                         </div>
                     </div>
 
@@ -89,7 +89,7 @@
                 <div class="row">
                     <div class="col-lg-3 p-0">
                         <div class="wrapper-image coctail">
-                            <?php echo wp_get_attachment_image( $left_image, 'full' ); ?>
+                            <?php echo wp_get_attachment_image( $left_image, 'full', false, array('class'=>'img-fluid') ); ?>
                         </div>
                     </div>
                     <div class="col-lg-6 mt-5">
@@ -104,10 +104,10 @@
                     </div>
                     <div class="col-lg-3 mt-3">
                         <div class="wrapper-coctail coctail">
-                            <?php echo wp_get_attachment_image( $right_image_1, 'full' ); ?>
+                            <?php echo wp_get_attachment_image( $right_image_1, 'full', false, array('class'=>'img-fluid') ); ?>
                         </div>
                         <div class="wrapper-coctail inner">
-                            <?php echo wp_get_attachment_image( $right_image_2, 'full' ); ?>
+                            <?php echo wp_get_attachment_image( $right_image_2, 'full', false, array('class'=>'img-fluid') ); ?>
                         </div>
                     </div>
 

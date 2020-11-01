@@ -12,15 +12,20 @@ if (!defined('_S_VERSION')) {
     define('_S_VERSION', '1.0.0');
 }
 if (!function_exists('wpbootstrap_enqueue_styles')) {
-    function wpbootstrap_enqueue_styles()
-    {
+    function wpbootstrap_enqueue_styles() {
+
+        define('BOOTSTRAP_VERSION', '4.5.3');
 
         wp_enqueue_style('my-style', get_template_directory_uri() . '/style.css');
-        define('BOOTSTRAP_VERSION', '4.5.3');
+
         $theme_file_uri = get_theme_file_uri();
+
         wp_register_style('bootstrap', $theme_file_uri . '/assets/bootstrap/bootstrap.min.css', array(), BOOTSTRAP_VERSION);
+        
         wp_enqueue_style('doshermanos-style', get_stylesheet_uri(), array('bootstrap'), _S_VERSION);
-        wp_enqueue_script('bootstrap', $theme_file_uri . '/assets/bootstrap/bootstrap.min.js', array('jquery'), BOOTSTRAP_VERSION, true);
+        
+        wp_enqueue_script('bootstrap', $theme_file_uri . '/assets/bootstrap/bootstrap.bundle.min.js', array('jquery'), BOOTSTRAP_VERSION, true);
+
         wp_enqueue_script('jquery-ui-tabs');
 
     }

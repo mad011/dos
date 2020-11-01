@@ -12,7 +12,7 @@
 ?>
 
 
-        <footer id="colophon" class="site-footer" style="background-image: url(../wp-content/themes/dos/images/bg_footer.png);">
+        <footer id="colophon" class="site-footer" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/bg_footer.png);">
             <div class="container-fluid">
                 <div class="row">
 

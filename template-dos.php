@@ -4,7 +4,7 @@ get_header();
 
 ?>
 
-<section class="dos-hermanos-header" style="background-image: url(../wp-content/themes/dos/images/header_photo.jpg);"></section>
+<section class="dos-hermanos-header" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/header_photo.jpg);"></section>
 
     <section id="our-story">
         <div class="container-fluid">
@@ -55,7 +55,7 @@ get_header();
             </div>
         </div>
     </section>
-    <section id="meet" style="background-image: url(../wp-content/themes/dos/images/banner_bg_prive.jpg);">
+    <section id="meet" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/banner_bg_prive.jpg);">
 
         <div class="container">
             <div class="row">
@@ -129,7 +129,7 @@ get_header();
     </section>
     <!---->
 
-    <section class="location" style="background-image: url(../wp-content/themes/dos/images/bg_wall.jpg);">
+    <section class="location" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/bg_wall.jpg);">
         <div class="container-fluid">
             <div class="row">
 

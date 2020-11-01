@@ -5,9 +5,9 @@
 
 get_header();
 ?>
-    <section class="events-header" style="background-image: url(../wp-content/themes/dos/images/header_photo_event.png);"></section>
+    <section class="events-header" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/header_photo_event.png);"></section>
 
-    <section class="events" style="background-image: url(../wp-content/themes/dos/images/bg_drink.png);">
+    <section class="events" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/bg_drink.png);">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
@@ -119,7 +119,7 @@ get_header();
             </div>
         </div>
     </section>
-<section class="event-bg" style="background-image: url(../wp-content/themes/dos/images/bg_wall.jpg);">
+<section class="event-bg" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/bg_wall.jpg);">
     <div class="container">
         <div class="row">
             <div class="tab-content" id="pills-tabContent">

@@ -6,13 +6,17 @@
  */
 ?>
 
-<section class="Fiesta" style="background-image: url(../wp-content/themes/dos/images/photo_competition.png);">
+
+
+<section class="Fiesta" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/photo_competition.png);">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="text-center">
                     <div class="flexbox">
+                        
                         <img src="wp-content/themes/dos/images/logo_contest.png" class="img-fluid">
+
                         <div class="wrapper-content fiesta">
                             <p>
                                 Κερδίστε πλήρες γεύμα & margaritas για 4 άτομακαι γιορτάστε την * International Tequila
@@ -34,7 +38,7 @@
         <div class="row no-gutters">
 
             <div class="col-lg-4 p-0">
-                <div class="Private" style="background-image: url(images/bg_event.png);">
+                <div class="Private" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/bg_event.png);">
                     <div class="flexbox">
                         <div class="title">
                             <h2>PRIVATE PARTH & COROPORATE EVENTS</h2>
@@ -95,7 +99,7 @@
 
         </div>
         <div class="row no-gutters">
-            <section class="testimonial" style="background-image: url(images/bg_wall.jpg);">
+            <section class="testimonial" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/bg_wall.jpg);">
                 <div class="col-lg-12 mt-5">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">

@@ -7,7 +7,7 @@
  *
  */
 ?>
-<section class="Latest events" style="background-image: url(../wp-content/themes/dos/images/bg_wall.jpg);">
+<section class="Latest events" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/bg_wall.jpg);">
     <div class="container-fluid pt-5 pb-5">
         <div class="row">
 

@@ -6,7 +6,7 @@
  */
 ?>
 
-<section class="Fiesta" style="background-image: url(images/photo_competition.png);">
+<section class="Fiesta" style="background-image: url(../wp-content/themes/dos/images/photo_competition.png);">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

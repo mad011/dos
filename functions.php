@@ -199,11 +199,16 @@ if (defined('JETPACK__VERSION')) {
 require get_template_directory() . '/inc/features.php';
 
 /**
-* Remove Gutenberg Editor except posts
+* Remove Gutenberg Editor on certain post types
 */
 add_filter( 'use_block_editor_for_post_type', function( $use_block_editor, $post_type ) {
 
-	if ( $post_type !== 'post' ) { return false; }
+    $post_types_arr = array(
+        'post',
+        'events'
+    );
+
+	if ( ! in_array( $post_type, $post_types_arr ) ) { return false; }
 
 	return $use_block_editor;
 

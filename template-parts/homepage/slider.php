@@ -34,7 +34,7 @@ $slideTo = $item = 0;
 
                             <div class="carousel-item <?php echo $item == 0 ? 'active' : ''; ?>">
 
-                                <?php echo wp_get_attachment_image( $image_id, 'full', false, array('class'=>'d-block img-fluid') ); ?>
+                                <?php echo wp_get_attachment_image( $image_id, 'full', false, array('class'=>'d-block w-100 h-auto') ); ?>
 
                             </div>
 

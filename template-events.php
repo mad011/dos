@@ -5,8 +5,9 @@
 
 get_header();
 ?>
+    <section class="events-header" style="background-image: url('images/header_photo_event.png');"></section>
 
-    <section class="events">
+    <section class="events" style="background-image: url(images/bg_drink.png);">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
@@ -118,7 +119,7 @@ get_header();
             </div>
         </div>
     </section>
-<section class="event-bg">
+<section class="event-bg" style="background-image: url(images/bg_wall.jpg);">
     <div class="container">
         <div class="row">
             <div class="tab-content" id="pills-tabContent">

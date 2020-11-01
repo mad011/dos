@@ -3,6 +3,9 @@
 get_header();
 
 ?>
+
+<section class="dos-hermanos-header" style="background-image: url('images/header_photo.jpg');"></section>
+
     <section id="our-story">
         <div class="container-fluid">
             <div class="row">
@@ -52,7 +55,7 @@ get_header();
             </div>
         </div>
     </section>
-    <section id="meet">
+    <section id="meet" style="background-image: url(images/banner_bg_prive.jpg);">
 
         <div class="container">
             <div class="row">
@@ -126,7 +129,7 @@ get_header();
     </section>
     <!---->
 
-    <section class="location">
+    <section class="location" style="background-image: url(images/bg_wall.jpg);">
         <div class="container-fluid">
             <div class="row">
 

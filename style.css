@@ -737,7 +737,7 @@ section.events-header{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height: 70vh;
+    height: 90vh;
 
 }
 
@@ -777,4 +777,14 @@ section.Our-Place-wrapper{
 
 section.Our-Place-wrapper h1{
     color: black;
+}
+
+
+/*============FIND UD ================*/
+
+.page-template-template-findus section.find-Us{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 90vh;
 }

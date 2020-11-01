@@ -342,15 +342,14 @@ section.Latest.events .image.logo {
     left: 15%;
 }
 
-section.Fiesta.de.Tequila {
-    background-image: url("images/photo_competition.png");
+section.Fiesta {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     height: 900px;
 }
 
-section.Fiesta.de.Tequila .text-center .flexbox {
+section.Fiesta .text-center .flexbox {
     top: 100px;
     position: absolute;
     left: 50%;
@@ -396,7 +395,6 @@ section.Private.Party .flexbox .content p {
 }
 
 section.Private.Party .Private {
-    background-image: url("images/bg_event.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -404,7 +402,6 @@ section.Private.Party .Private {
 
 section.Private.Party,
 section.testimonial {
-    background-image: url("images/bg_wall.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -426,7 +423,6 @@ section.testimonial div#carouselExampleIndicators {
 
 /*==========FOOTER AREA=========*/
 footer#colophon {
-    background-image: url('images/bg_footer.png');
     background-repeat: no-repeat;
     background-position: center center;
     height: 100%;
@@ -600,8 +596,7 @@ footer#colophon .flexbox-container2 ul#menu-footer li > a:last-child {
 
 /*=============DOS HERMANOS PAGE STYLE ============*/
 
-.page-id-7 header {
-    background-image: url('images/header_photo.jpg');
+section.dos-hermanos-header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -614,8 +609,8 @@ section#our-story {
 }
 
 
-section#our-story, section.location,section.event-bg {
-    background-image: url('images/bg_wall.jpg');
+section#our-story, section.location,
+section.event-bg {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -627,7 +622,6 @@ section.location h1, p {
 }
 
 section#meet {
-    background-image: url('images/banner_bg_prive.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -739,8 +733,7 @@ p.our-bolder {
 
 
 
-.page-id-13 header {
-    background-image: url('images/header_photo_event.png');
+section.events-header{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -748,14 +741,7 @@ p.our-bolder {
 
 }
 
-
-
-
-
-
-
 section.events {
-    background-image: url('images/bg_drink.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

@@ -33,7 +33,7 @@
         </div>
     </div>
 </section>
-<section class="Private Party">
+<section class="Private Party" style="background-image: url(https://www.doshermanos.gr/v2/wp-content/themes/dos/images/bg_wall.jpg);">
     <div class="container-fluid p-0">
         <div class="row no-gutters">
 

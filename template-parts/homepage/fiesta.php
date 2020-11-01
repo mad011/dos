@@ -6,7 +6,7 @@
  */
 ?>
 
-<section class="Fiesta">
+<section class="Fiesta" style="background-image: url(../wp-content/themes/dos/images/photo_competition.png);">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -34,7 +34,7 @@
         <div class="row no-gutters">
 
             <div class="col-lg-4 p-0">
-                <div class="Private">
+                <div class="Private" style="background-image: url(images/bg_event.png);">
                     <div class="flexbox">
                         <div class="title">
                             <h2>PRIVATE PARTH & COROPORATE EVENTS</h2>
@@ -95,7 +95,7 @@
 
         </div>
         <div class="row no-gutters">
-            <section class="testimonial">
+            <section class="testimonial" style="background-image: url(images/bg_wall.jpg);">
                 <div class="col-lg-12 mt-5">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">

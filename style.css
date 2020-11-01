@@ -79,13 +79,13 @@ html {
  */
 @font-face {
     font-family: MANROPE;
-    src: url(http://localhost/Mariz/wp-content/themes/dos/fonts/MANROPE-VARIABLEFONT_WGHT.TTF);
+    src: url(fonts/MANROPE-VARIABLEFONT_WGHT.TTF);
     font-weight: normal;
 }
 
 @font-face {
     font-family: POLIS;
-    src: url(http://localhost/Mariz/wp-content/themes/dos/fonts/POLISREGULAR2.OTF);
+    src: url(fonts/POLISREGULAR2.OTF);
     font-weight: normal;
 }
 
@@ -196,7 +196,6 @@ div#primary-menu ul li:nth-last-child(-n+3) {
 */
 /*=================section of mexican cuisiner*/
 section.cusine {
-    background-image: url("images/Bg_cusina.png");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -231,7 +230,6 @@ section.Fiesta.de.Tequila .wrapper-content.fiesta {
 }
 
 section.cus-continue {
-    background-image: url("images/photo_cisina.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
@@ -240,7 +238,6 @@ section.cus-continue {
 }
 
 section.coctails-continue {
-    background-image: url("images/bg_drink.png");
     background-repeat: no-repeat;
     background-size: cover;
     /*background-attachment: fixed;*/
@@ -260,8 +257,7 @@ section.coctails-continue {
     background: inherit;
 }
 
-section.coctails-continue.after {
-    background-image: url("images/photo_bar.png");
+section.coctails-continue.after {    
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
@@ -269,7 +265,6 @@ section.coctails-continue.after {
 }
 
 section.Latest.events {
-    background-image: url("images/bg_wall.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -780,386 +775,20 @@ section.events {
 }
 
 
-/**/
-/**/
-
-
-/*}*/
-
-/*div#site-header {*/
-/*    position: absolute;*/
-/*    width: 100%;*/
-/*    top: 0;*/
-/*    height: 100%;*/
-/*}*/
-
-/*.custom-logo {*/
-/*    position: relative;*/
-/*    top: 0;*/
-/*    z-index: 10;*/
-/*}*/
-
-/*nav#site-navigation {*/
-/*    position: relative;*/
-/*    z-index: 12;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*}*/
-
-/*.menu-main-container {*/
-/*    width: 100%;*/
-/*}*/
-
-/*button.menu-toggle {*/
-/*    display: none;*/
-/*}*/
-
-/*.menu-main-container ul#primary-menu {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*}*/
-
-/*ul#primary-menu li:first-child {*/
-/*    order: 1;*/
-/*}*/
-
-/*ul#primary-menu li:nth-child(2) {*/
-/*    order: 2;*/
-/*    position: relative;*/
-/*}*/
-
-/*ul#primary-menu li:nth-child(2):hover >ul.sub-menu{*/
-/*    display: block;*/
-/*    position: absolute;*/
-/*    !*position: initial;*!*/
-
-/*}*/
-
-/*ul#primary-menu li:nth-child(3) {*/
-/*    order: 3;*/
-/*    margin-right: 30em;*/
-/*}*/
-
-/*ul#primary-menu li:nth-child(4) {*/
-/*    order: 4;*/
-/*    position: relative;*/
-/*    left: -10%;*/
-/*}*/
-
-/*ul#primary-menu li:nth-child(5) {*/
-/*    order: 5;*/
-/*    position: relative;*/
-/*    left: -10%;*/
-/*}*/
-
-/*ul#primary-menu li:nth-child(4) + ul#primary-menu li:nth-child(5) {*/
-/*    position: relative;*/
-/*    left: -10%;*/
-/*}*/
-
-
-/*section.cusine {*/
-/*    background-image: url("https://www.doshermanos.gr/v2/wp-content/uploads/2020/09/Bg_cusina.png");*/
-/*    background-position: center center;*/
-/*    background-size: cover;*/
-/*    background-repeat: no-repeat;*/
-/*    background-attachment: fixed;*/
-/*}*/
-
-/*section.cus-continue {*/
-/*    height: 1000px;*/
-/*    background-image: url("https://www.doshermanos.gr/v2/wp-content/uploads/2020/09/photo_cisina.png");*/
-/*    background-repeat: no-repeat;*/
-/*    background-attachment: fixed;*/
-/*    background-position: center center;*/
-/*}*/
-
-/*section.coctails-continue {*/
-/*    background-image: url("https://www.doshermanos.gr/v2/wp-content/uploads/2020/09/bg_drink.png");*/
-/*    background-repeat: no-repeat;*/
-/*    background-position: center center;*/
-/*}*/
-
-/*section.coctails-continue.after {*/
-/*    background-image: url("https://www.doshermanos.gr/v2/wp-content/uploads/2020/09/photo_bar.png");*/
-/*    height: 1000px;*/
-/*    background-repeat: no-repeat;*/
-/*    background-attachment: fixed;*/
-/*    background-position: center center;*/
-/*}*/
-
-/*section.Latest.events {*/
-/*    background-image: url("https://www.doshermanos.gr/v2/wp-content/uploads/2020/09/bg_wall.jpg");*/
-/*    background-repeat: no-repeat;*/
-/*    background-position: center center;*/
-/*}*/
-
-
-/*!*this is a page of DOS Hermanos*!*/
-/*.page-id-47 header {*/
-/*    background-image: url('https://www.doshermanos.gr/v2/wp-content/uploads/2020/10/header_photo.jpg');*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: cover;*/
-/*    background-position: center center;*/
-/*    !*height: 700px;*!*/
-
-
-/*}*/
-
-/*.category-eat header{*/
-/*    background-image: url('https://www.doshermanos.gr/v2/wp-content/uploads/2020/10/header_cusina_photo.jpg');*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: cover;*/
-/*    background-position: center center;*/
-
-/*}*/
-/*.category-drink header{*/
-
-/*}*/
-
-
-/*.page-id-65 header {*/
-/*    background-image: url('https://www.doshermanos.gr/v2/wp-content/uploads/2020/10/header_photo_ourplace.jpg');*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: cover;*/
-/*    background-position: center center;*/
-/*}*/
-
-/*.page-id-65 .metaslider .flexslider {*/
-/*    margin: 0;*/
-/*}*/
-
-/*section#our-place h2, p.background {*/
-
-/*    color: #fff;*/
-/*}*/
-
-/*section#our-place .next div:first-child {*/
-
-/*}*/
-/*section#our-place .wp-block-image figcaption{*/
-/*    margin: 0;*/
-/*    color: #ffffff;*/
-/*}*/
-/*section#our-place figure.wp-block-image.size-full{*/
-/*    position: relative;*/
-/*}*/
-/*section#our-place figure.wp-block-image.size-large.is-resized img{*/
-/*    !*width: 300px;*!*/
-/*    !*object-fit: contain;*!*/
-/*}*/
-/*figcaption{*/
-/*    position: absolute;*/
-/*    top: 30px;*/
-/*    font-size: 45px;*/
-/*    left: 13%;*/
-/*}*/
-/*section#our-place form input {*/
-/*    outline: 0;*/
-/*    border-width: 0 0 2px;*/
-/*    border-color: #000000;*/
-/*    background: inherit;*/
-/*}*/
-/*section#our-place input:focus {*/
-/*    border-color: #000000;*/
-/*}*/
-
-
-/*.page-id-47,*/
-/*.page-id-65 section {*/
-/*    background-image: url('https://www.doshermanos.gr/v2/wp-content/uploads/2020/10/bg_wall-1.jpg');*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: cover;*/
-/*    background-position: center center;*/
-/*}*/
-
-/*.page-id-47 section#meet, .page-id-65 section#our-place .wp-block-columns.next {*/
-/*    background-image: url('https://www.doshermanos.gr/v2/wp-content/uploads/2020/10/banner_bg_prive.jpg');*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: cover;*/
-/*    background-position: center center;*/
-/*}*/
-
-/*.wrapper {*/
-/*    margin-left: 20%;*/
-/*    margin-right: 20%;*/
-/*    margin-top: 10%;*/
-/*}*/
-
-/*section#meet {*/
-/*    padding: 4rem;*/
-/*}*/
-
-
-/*.team-box:hover span.member.title, .team-box-overlay:after {*/
-/*    content: '';*/
-/*    color: white;*/
-/*    position: absolute;*/
-/*    bottom: 0;*/
-/*    transition-timing-function: ease-in-out;*/
-/*    transition: 0.3s;*/
-/*    visibility: visible;*/
-/*    opacity: 1;*/
-/*    top: 45%; !* position the top  edge of the element at the middle of the parent *!*/
-/*    left: 25%; !* position the left edge of the element at the middle of the parent *!*/
-
-/*    transform: translate(-50%, -50%);*/
-/*}*/
-
-/*.team-box:hover span.member.content, .team-box-overlay > span:after {*/
-/*    content: '';*/
-/*    color: white;*/
-/*    visibility: visible;*/
-/*    opacity: 1;*/
-/*    position: absolute;*/
-/*    top: 60%;*/
-/*    font-size: 13px;*/
-/*    left: 50%;*/
-/*    display: block;*/
-/*    width: 310px;*/
-/*    transform: translate(-50%, -50%);*/
-/*}*/
-
-/*.team-box:hover span.member.excerpt, .team-box-overlay > span:after {*/
-/*    content: '';*/
-/*    color: white;*/
-/*    visibility: visible;*/
-/*    opacity: 1;*/
-/*    position: absolute;*/
-/*    top: 30%;*/
-/*    font-size: 13px;*/
-/*    left: 42%;*/
-/*    display: block;*/
-/*    width: 245px;*/
-/*    transform: translate(-50%, -50%);*/
-/*}*/
-
-/*.location.content {*/
-/*    padding: 2rem;*/
-/*}*/
-
-/*!*.team-box:hover span:nth-child(2),.team-box-overlay :after{*!*/
-/*!*    content: '';*!*/
-/*!*    color: white;*!*/
-/*!*    position: absolute;*!*/
-/*!*    bottom: 0;*!*/
-/*!*    transition-timing-function: ease-in;*!*/
-/*!*    transition: 0.2s;*!*/
-/*!*    visibility: visible;*!*/
-/*!*    opacity: 1;*!*/
-/*!*    top: 45%;  !* position the top  edge of the element at the middle of the parent *!*!*/
-/*!*    left: 30%; !* position the left edge of the element at the middle of the parent *!*!*/
-
-/*!*    transform: translate(-50%, -50%);*!*/
-/*!*}*!*/
-
-
-/*}*/
-
-/*.team-box img {*/
-/*    object-fit: contain;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-
-/*}*/
-
-/*h1.team {*/
-/*    color: white;*/
-/*}*/
-
-/*!*end Doshermanos page*!*/
-
-/*.page-id-69,*/
-/*.category-events header {*/
-/*    background-image: url('https://www.doshermanos.gr/v2/wp-content/uploads/2020/10/header_photo_event.png.jpg');*/
-/*    background-repeat: no-repeat;*/
-/*    height: 700px;*/
-/*}*/
-
-/*section.find-us.page-69 {*/
-/*    background-image: url('https://www.doshermanos.gr/v2/wp-content/uploads/2020/09/bg_drink.png');*/
-/*    background-repeat: no-repeat;*/
-/*    height: 300px;*/
-/*}*/
-
-
-/*div#site-header img {*/
-/*    width: 100%;*/
-/*}*/
-
-/*.site-branding {*/
-/*    width: 100%;*/
-/*}*/
-
-/*.homeicon {*/
-
-/*    padding: 2rem 3rem;*/
-/*}*/
-
-/*.logo {*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*    transform: translate(-50%, 0%);*/
-/*    top: 0;*/
-/*    z-index: 10;*/
-
-/*}*/
-
-/*img.custom-logo {*/
-/*    object-fit: contain;*/
-/*    width: 100%;*/
-/*}*/
-
-/*.menu-item a:before {*/
-/*    display: none;*/
-/*}*/
-
-/*.main-navigation {*/
-/*    display: block;*/
-/*    width: 100%;*/
-/*}*/
-
-/*.main-navigation ul {*/
-/*    display: none;*/
-/*    list-style: none;*/
-/*    margin: 0;*/
-/*    padding-left: 0;*/
-/*}*/
-
-/*.main-navigation ul ul {*/
-/*    !*box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);*!*/
-/*    !*float: left;*!*/
-/*    !*position: absolute;*!*/
-/*    !*top: 100%;*!*/
-/*    !*left: -999em;*!*/
-/*    !*z-index: 99999;*!*/
-/*}*/
-
-/*.main-navigation ul ul ul {*/
-/*    left: -999em;*/
-/*    top: 0;*/
-/*}*/
-
-
-/*.main-navigation ul ul a {*/
-/*    width: 200px;*/
-/*}*/
-
-
-/*.main-navigation li {*/
-
-/*}*/
-
-/*.main-navigation a {*/
-/*    display: block;*/
-/*    text-decoration: none;*/
-/*}*/
-
-/*!* Small menu. *!*/
-/*.menu-toggle,*/
-/*.main-navigation.toggled ul {*/
-/*    display: block;*/
-/*}*/
-
-/*================START FOOTER================*/
+/*==========OUR PLACE ==============*/
+
+.page-template-template-our-place section.Our-Place{
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 90vh;
+}
+
+section.Our-Place-wrapper{
+    padding: 4rem 0;
+}
+
+section.Our-Place-wrapper h1{
+    color: black;
+}

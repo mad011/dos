@@ -113,7 +113,7 @@ get_header();
                             <span class="member title"></span>
 
                             <span class="member content"></span>
-                                 <img class="img-fluid w-100" src="../wp-content/themes/dos/images/photo_team03.jpg"
+                                 <img class="img-fluid w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/images/Photo_slider.pngimages/photo_team03.jpg">
 
 
 

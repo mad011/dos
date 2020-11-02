@@ -13,7 +13,7 @@ get_header();
                 <div class="col-lg-12">
 
                     <div id="inside" class="text-center">
-                        <img class="img-fluid w-10="src="../wp-content/themes/dos/images/title_lastevent.png">
+                        <img class="img-fluid w-10="src="<?php echo get_stylesheet_directory_uri(); ?>/images/title_lastevent.png">
                     </div>
                     <div class="event-tabs">
                         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">

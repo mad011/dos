@@ -128,11 +128,11 @@ get_header();
                         <div class="col-lg-6 mt-5 mb-2">
                             <div class="box event">
                                 <div class="box-event image">
-                                    <img class="img-fluid w-10=" src="../wp-content/themes/dos/images/01_photo_news.jpg">
+                                    <img class="img-fluid w-10=" src="<?php echo get_stylesheet_directory_uri(); ?>/images/Photo_slider.png/images/01_photo_news.jpg">
                                 </div>
                             </div>
                             <div class="wrapper box describe">
-                                <img class="img-fluid w-10="src=" ../wp-content/themes/dos/images/paper_bg_title_news.png">
+                                <img class="img-fluid w-10="src="<?php echo get_stylesheet_directory_uri(); ?>/images/Photo_slider.png/images/paper_bg_title_news.png">
                                 <h3 class="title">
                                     ΑΠΟ ΤΗ ΔΕΥΤΕΡΑ 25 ΜΑΙΟΥ ΚΑΙ ΠΑΛΙ ΣΤΟ ΓΕΥΣΤΙΚΟ ΤΑΞΙΔΙ ΜΑΣ ΣΤΟ ΜΕΞΙΚΟ!
                                 </h3>
@@ -152,62 +152,11 @@ get_header();
                         <div class="col-lg-6 mt-5 mb-2 ">
                             <div class="box event">
                                 <div class="box-event image">
-                                    <img class="img-fluid w-10=" src=" ../wp-content/themes/dos/images/02_photo_news.jpg">
+                                    <img class="img-fluid w-10=" src="<?php echo get_stylesheet_directory_uri(); ?>/images/Photo_slider.png/images/02_photo_news.jpg">
                                 </div>
                             </div>
                             <div class="wrapper box describe">
-                                <img class="img-fluid w-10=" src=" ../wp-content/themes/dos/images/paper_bg_title_news.png">
-                                <h3 class="title">
-                                    ΑΠΟ ΤΗ ΔΕΥΤΕΡΑ 25 ΜΑΙΟΥ ΚΑΙ ΠΑΛΙ ΣΤΟ ΓΕΥΣΤΙΚΟ ΤΑΞΙΔΙ ΜΑΣ ΣΤΟ ΜΕΞΙΚΟ!
-                                </h3>
-                            </div>
-
-                            <div class="wrapper details">
-                                <span class="date">24/6/2020</span>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                                    but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                                    popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                                    and more recently with desktop publishing</p>
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 mt-5 mb-2 ">
-                            <div class="box event">
-                                <div class="box-event image">
-                                    <img class="img-fluid w-10="src=" ../wp-content/themes/dos/images/03_photo_news.jpg">
-                                </div>
-                            </div>
-                            <div class="wrapper box describe">
-                                <img class="img-fluid w-10="src=" ../wp-content/themes/dos/images/paper_bg_title_news.png">
-                                <h3 class="title">
-                                    ΑΠΟ ΤΗ ΔΕΥΤΕΡΑ 25 ΜΑΙΟΥ ΚΑΙ ΠΑΛΙ ΣΤΟ ΓΕΥΣΤΙΚΟ ΤΑΞΙΔΙ ΜΑΣ ΣΤΟ ΜΕΞΙΚΟ!
-                                </h3>
-                            </div>
-
-                            <div class="wrapper details">
-                                <span class="date">24/6/2020</span>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                                    of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                                    but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                                    popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                                    and more recently with desktop publishing</p>
-
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mt-5 mb-2 ">
-                            <div class="box event">
-                                <div class="box-event image">
-                                    <img class="img-fluid w-10="src=" ../wp-content/themes/dos/images/04_photo_news.png">
-                                </div>
-                            </div>
-                            <div class="wrapper box describe">
-                                <img class="img-fluid w-10=" src=" ../wp-content/themes/dos/images/paper_bg_title_news.png">
+                                <img class="img-fluid w-10=" src=" <?php echo get_stylesheet_directory_uri(); ?>/images/Photo_slider.png/images/paper_bg_title_news.png">
                                 <h3 class="title">
                                     ΑΠΟ ΤΗ ΔΕΥΤΕΡΑ 25 ΜΑΙΟΥ ΚΑΙ ΠΑΛΙ ΣΤΟ ΓΕΥΣΤΙΚΟ ΤΑΞΙΔΙ ΜΑΣ ΣΤΟ ΜΕΞΙΚΟ!
                                 </h3>
@@ -230,11 +179,11 @@ get_header();
                         <div class="col-lg-6 mt-5 mb-2 ">
                             <div class="box event">
                                 <div class="box-event image">
-                                    <img class="img-fluid w-10=" src=" ../wp-content/themes/dos/images/01_photo_news.jpg">
+                                    <img class="img-fluid w-10="src="<?php echo get_stylesheet_directory_uri(); ?>/images/Photo_slider.png/images/03_photo_news.jpg">
                                 </div>
                             </div>
                             <div class="wrapper box describe">
-                                <img class="img-fluid w-10=" src=" ../wp-content/themes/dos/images/paper_bg_title_news.png">
+                                <img class="img-fluid w-10="src="<?php echo get_stylesheet_directory_uri(); ?>/images/Photo_slider.png/images/paper_bg_title_news.png">
                                 <h3 class="title">
                                     ΑΠΟ ΤΗ ΔΕΥΤΕΡΑ 25 ΜΑΙΟΥ ΚΑΙ ΠΑΛΙ ΣΤΟ ΓΕΥΣΤΙΚΟ ΤΑΞΙΔΙ ΜΑΣ ΣΤΟ ΜΕΞΙΚΟ!
                                 </h3>
@@ -254,11 +203,62 @@ get_header();
                         <div class="col-lg-6 mt-5 mb-2 ">
                             <div class="box event">
                                 <div class="box-event image">
-                                    <img class="img-fluid w-10="src=" ../wp-content/themes/dos/images/01_photo_news.jpg">
+                                    <img class="img-fluid w-10="src="<?php echo get_stylesheet_directory_uri(); ?>/images/Photo_slider.png/images/04_photo_news.png">
                                 </div>
                             </div>
                             <div class="wrapper box describe">
-                                <img class="img-fluid w-10="src=" ../wp-content/themes/dos/images/paper_bg_title_news.png" >
+                                <img class="img-fluid w-10=" src="<?php echo get_stylesheet_directory_uri(); ?>/images/Photo_slider.png/images/paper_bg_title_news.png">
+                                <h3 class="title">
+                                    ΑΠΟ ΤΗ ΔΕΥΤΕΡΑ 25 ΜΑΙΟΥ ΚΑΙ ΠΑΛΙ ΣΤΟ ΓΕΥΣΤΙΚΟ ΤΑΞΙΔΙ ΜΑΣ ΣΤΟ ΜΕΞΙΚΟ!
+                                </h3>
+                            </div>
+
+                            <div class="wrapper details">
+                                <span class="date">24/6/2020</span>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                    the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                                    of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                                    but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                                    popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                    and more recently with desktop publishing</p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 mt-5 mb-2 ">
+                            <div class="box event">
+                                <div class="box-event image">
+                                    <img class="img-fluid w-10=" src="<?php echo get_stylesheet_directory_uri(); ?>/images/Photo_slider.png/images/01_photo_news.jpg">
+                                </div>
+                            </div>
+                            <div class="wrapper box describe">
+                                <img class="img-fluid w-10=" src="<?php echo get_stylesheet_directory_uri(); ?>/images/Photo_slider.png/images/paper_bg_title_news.png">
+                                <h3 class="title">
+                                    ΑΠΟ ΤΗ ΔΕΥΤΕΡΑ 25 ΜΑΙΟΥ ΚΑΙ ΠΑΛΙ ΣΤΟ ΓΕΥΣΤΙΚΟ ΤΑΞΙΔΙ ΜΑΣ ΣΤΟ ΜΕΞΙΚΟ!
+                                </h3>
+                            </div>
+
+                            <div class="wrapper details">
+                                <span class="date">24/6/2020</span>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                    the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                                    of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                                    but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                                    popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                    and more recently with desktop publishing</p>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mt-5 mb-2 ">
+                            <div class="box event">
+                                <div class="box-event image">
+                                    <img class="img-fluid w-10="src="<?php echo get_stylesheet_directory_uri(); ?>/images/Photo_slider.png/images/01_photo_news.jpg">
+                                </div>
+                            </div>
+                            <div class="wrapper box describe">
+                                <img class="img-fluid w-10="src="<?php echo get_stylesheet_directory_uri(); ?>/images/Photo_slider.png/images/paper_bg_title_news.png" >
                                 <h3 class="title">
                                     ΑΠΟ ΤΗ ΔΕΥΤΕΡΑ 25 ΜΑΙΟΥ ΚΑΙ ΠΑΛΙ ΣΤΟ ΓΕΥΣΤΙΚΟ ΤΑΞΙΔΙ ΜΑΣ ΣΤΟ ΜΕΞΙΚΟ!
                                 </h3>
@@ -307,11 +307,11 @@ get_header();
                         <div class="col-lg-6 mt-5 mb-2 ">
                             <div class="box event">
                                 <div class="box-event image">
-                                    <img class="img-fluid w-10="src=" ../wp-content/themes/dos/images/01_photo_news.jpg">
+                                    <img class="img-fluid w-10="src="<?php echo get_stylesheet_directory_uri(); ?>/images/Photo_slider.png/images/01_photo_news.jpg">
                                 </div>
                             </div>
                             <div class="wrapper box describe">
-                                <img class="img-fluid w-10="src=" ../wp-content/themes/dos/images/paper_bg_title_news.png">
+                                <img class="img-fluid w-10="src="<?php echo get_stylesheet_directory_uri(); ?>/images/Photo_slider.png/images/paper_bg_title_news.png">
                                 <h3 class="title">
                                     ΑΠΟ ΤΗ ΔΕΥΤΕΡΑ 25 ΜΑΙΟΥ ΚΑΙ ΠΑΛΙ ΣΤΟ ΓΕΥΣΤΙΚΟ ΤΑΞΙΔΙ ΜΑΣ ΣΤΟ ΜΕΞΙΚΟ!
                                 </h3>

@@ -12,15 +12,20 @@ if (!defined('_S_VERSION')) {
     define('_S_VERSION', '1.0.0');
 }
 if (!function_exists('wpbootstrap_enqueue_styles')) {
-    function wpbootstrap_enqueue_styles()
-    {
+    function wpbootstrap_enqueue_styles() {
+
+        define('BOOTSTRAP_VERSION', '4.5.3');
 
         wp_enqueue_style('my-style', get_template_directory_uri() . '/style.css');
-        define('BOOTSTRAP_VERSION', '4.5.3');
+
         $theme_file_uri = get_theme_file_uri();
+
         wp_register_style('bootstrap', $theme_file_uri . '/assets/bootstrap/bootstrap.min.css', array(), BOOTSTRAP_VERSION);
+        
         wp_enqueue_style('doshermanos-style', get_stylesheet_uri(), array('bootstrap'), _S_VERSION);
-        wp_enqueue_script('bootstrap', $theme_file_uri . '/assets/bootstrap/bootstrap.min.js', array('jquery'), BOOTSTRAP_VERSION, true);
+        
+        wp_enqueue_script('bootstrap', $theme_file_uri . '/assets/bootstrap/bootstrap.bundle.min.js', array('jquery'), BOOTSTRAP_VERSION, true);
+
         wp_enqueue_script('jquery-ui-tabs');
 
     }
@@ -199,11 +204,16 @@ if (defined('JETPACK__VERSION')) {
 require get_template_directory() . '/inc/features.php';
 
 /**
-* Remove Gutenberg Editor except posts
+* Remove Gutenberg Editor on certain post types
 */
 add_filter( 'use_block_editor_for_post_type', function( $use_block_editor, $post_type ) {
 
-	if ( $post_type !== 'post' ) { return false; }
+    $post_types_arr = array(
+        'post',
+        'events'
+    );
+
+	if ( ! in_array( $post_type, $post_types_arr ) ) { return false; }
 
 	return $use_block_editor;
 

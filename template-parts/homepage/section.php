@@ -6,106 +6,127 @@
 
  */
 
+ $home_bg_1 = get_field( 'home_bg_1' ); // Image ID
+ $home_bg_2 = get_field( 'home_bg_2' ); // Image ID
 
-?>
-<section class="cusine">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-3 p-0">
-                <div class="wrapper-image cuisine">
-                    <img src="wp-content/themes/dos/images/plate_move_01.png">
-                </div>
-            </div>
-            <div class="col-lg-6 mt-5">
-                <div class="d-flex flex-column wrapper-content">
-                    <div class="d-flex justify-content-center wrapper-content-image">
-                        <img src="wp-content/themes/dos/images/title_authenticmexicancusine.png" class="img-fluid">
-                    </div>
-                    <div class="wrapper-content inner">
-                        <p>
-                            Κουζίνα - σημείο αναφοράς με αυθεντικές παραδοσιακές μεξικάνικες συνταγες και πιάτα
-                            προικισμένα με βαθιά νοστιμάδα να ηγούνται του γευστικού ταξιδιού στο
-                            Μεξικό,η γευστική φαρέτρα του << DOS Hermanos >> μπαίνει στον φετινό χειμώνα ανανεωμένη με
-                            λαχταριστές εκπλήξεις: o chef -Patron Πιτερ Μαραγκός στο τιμόνι της
-                            κουζίνας ενώνει φέτος την γνώση και την έμπνευση του με τον ειδικό του premium spirits,Γιώτη
-                            Αγγελίδη για να δημιουργήσουν μαζί ευφάνταστους συνδευασμούς μεξικάνικης γαστρονομίας και
-                            εκλεκτών αποσταγμάτων.
+ ?>
 
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 mt-3">
-                <div class="wrapper-image cusine">
-                    <img src="wp-content/themes/dos/images/plate_move_02-1.png">
-                </div>
-                <div class="wrapper-image move">
-                    <img src="wp-content/themes/dos/images/pepper_move.png">
-                </div>
-            </div>
+<!-- Authentic Group Section -->
+<?php if ( have_rows( 'home_authentic_group' ) ) : ?>
+    <?php while ( have_rows( 'home_authentic_group' ) ) : the_row(); ?>
 
-        </div>
-    </div>
-</section>
-<!--<section class="cus-continue">-->
-<!--    <div class="container">-->
-<!--        <div class="row">-->
-<!--            <div class="col-lg-12">-->
-<!---->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!---->
-<!---->
-<!--</section>-->
-<section class="coctails-continue">
-    <div class="container-fluid">
-        <div class="row">
+        <?php
+        $main_image = get_sub_field( 'main_image' );
+        $background_image = get_sub_field( 'background_image' );
+        $left_image = get_sub_field( 'left_image' );
+        $right_image_1 = get_sub_field( 'right_image_1' );
+        $right_image_2 = get_sub_field( 'right_image_2' );
+        $content = get_sub_field( 'content' );
+        ?>
 
-            <div class="col-lg-3 p-0">
-                <div class="wrapper-image coctail">
-                    <img src="wp-content/themes/dos/images/Tequila_move_01-1.png" class="img-fluid">
-                </div>
-
-            </div>
-            <div class="col-lg-6 mt-5">
-                <div class="d-flex flex-column wrapper-content">
-                    <div class="d-flex justify-content-center wrapper-content-image">
-                        <img src="wp-content/themes/dos/images/title_tequila.png" class="img-fluid">
-                    </div>
-                    <div class="wrapper-content inner">
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book. It has survived not only five
-                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                            passages, and more recently with desktop publishing
-                        </p>
+        <section class="cusine" style="background-image: url(<?php echo wp_get_attachment_image_url( $background_image, 'full' ); ?>);">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 p-0">
+                        <div class="wrapper-image cuisine">
+                            <?php echo wp_get_attachment_image( $left_image, 'full', false, array('class'=>'img-fluid') ); ?>
                         </div>
                     </div>
-            </div>
+                    <div class="col-lg-6 mt-5">
+                        <div class="d-flex flex-column wrapper-content">
+                            <div class="d-flex justify-content-center wrapper-content-image">
+                                <?php echo wp_get_attachment_image( $main_image, 'full', false, array('class'=>'img-fluid') ); ?>
+                            </div>
+                            <div class="wrapper-content inner">
+                                <?php echo $content; ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mt-3">
+                        <div class="wrapper-image cusine">
+                            <?php echo wp_get_attachment_image( $right_image_1, 'full', false, array('class'=>'img-fluid') ); ?>
+                        </div>
+                        <div class="wrapper-image move">
+                            <?php echo wp_get_attachment_image( $right_image_2, 'full', false, array('class'=>'img-fluid') ); ?>
+                        </div>
+                    </div>
 
-            <div class="col-lg-3 mt-3">
-                <div class="wrapper-coctail coctail">
-                    <img src="wp-content/themes/dos/images/MojitoStrawberry.png" class="img-fluid">
                 </div>
-                <div class="wrapper-coctail inner">
-                    <img src="wp-content/themes/dos/images/lime_slice.png" class="img-fluid">
-                </div>
-
-
             </div>
-        </div>
-    </div>
+        </section>
+
+    <?php endwhile; ?>                                                                                          
+<?php endif; ?>
+
+<!-- Parallax BG #1 -->
+<?php if ( $home_bg_1 ) : ?>
+<section class="cus-continue" style="background-image: url(<?php echo wp_get_attachment_image_url( $home_bg_1, 'full' ); ?>)">
+   <div class="container">
+       <div class="row">
+           <div class="col-lg-12">
+
+           </div>
+       </div>
+   </div>
 </section>
-<!---->
-<!--<section class="coctails-continue after">-->
-<!--    <div class="container">-->
-<!--        <div class="row">-->
-<!--            <div class="col-lg-12">-->
-<!---->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
+<?php endif; ?>
+
+<!-- Cocktails Section -->
+<?php if ( have_rows( 'home_cocktails' ) ) : ?>
+    <?php while ( have_rows( 'home_cocktails' ) ) : the_row(); ?>
+
+        <?php
+        $main_image = get_sub_field( 'main_image' );
+        $background_image = get_sub_field( 'background_image' );
+        $left_image = get_sub_field( 'left_image' );
+        $right_image_1 = get_sub_field( 'right_image_1' );
+        $right_image_2 = get_sub_field( 'right_image_2' );
+        $content = get_sub_field( 'content' );
+        ?>
+
+        <section class="coctails-continue" style="background-image: url(<?php echo wp_get_attachment_image_url( $background_image, 'full' ); ?>);">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 p-0">
+                        <div class="wrapper-image coctail">
+                            <?php echo wp_get_attachment_image( $left_image, 'full', false, array('class'=>'img-fluid') ); ?>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-5">
+                        <div class="d-flex flex-column wrapper-content">
+                            <div class="d-flex justify-content-center wrapper-content-image">
+                                <?php echo wp_get_attachment_image( $main_image, 'full', false, array('class'=>'img-fluid') ); ?>
+                            </div>
+                            <div class="wrapper-content inner">
+                                <?php echo $content; ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mt-3">
+                        <div class="wrapper-coctail coctail">
+                            <?php echo wp_get_attachment_image( $right_image_1, 'full', false, array('class'=>'img-fluid') ); ?>
+                        </div>
+                        <div class="wrapper-coctail inner">
+                            <?php echo wp_get_attachment_image( $right_image_2, 'full', false, array('class'=>'img-fluid') ); ?>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    <?php endwhile; ?>                                                                                          
+<?php endif; ?>
+
+<!-- Parallax BG #2 -->
+<?php if ( $home_bg_2 ) : ?>
+<section class="coctails-continue after" style="background-image: url(<?php echo wp_get_attachment_image_url( $home_bg_2, 'full' ); ?>)">
+   <div class="container">
+       <div class="row">
+           <div class="col-lg-12">
+
+           </div>
+       </div>
+   </div>
+</section>
+<?php endif; ?>

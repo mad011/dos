@@ -257,7 +257,7 @@ section.coctails-continue {
     background: inherit;
 }
 
-section.coctails-continue.after {    
+section.coctails-continue.after {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
@@ -552,6 +552,32 @@ footer#colophon .flexbox-container2 ul#menu-footer li > a:last-child {
 }
 
 @media screen and (max-width: 768px) {
+    section.Corporate .corporate-form .instructions
+    {
+        width: 100%;
+    }
+    .corporate-form-contact  .corporate-icon{
+        width: 100%;
+    }
+    .corporate-icon h2{
+        font-size: 28px;
+    }
+    .flex-form {
+        display: flex;
+        flex-direction: column;
+    }
+    .flex-form .flex-right{
+        margin-left: 0;
+        padding: 10px;
+    }
+    .flex-left{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+    }
+
     .wrapper-image.cuisine img {
         width: 100%;
     }
@@ -617,8 +643,11 @@ section.event-bg {
 }
 
 section#our-story h1,
+section.find-Us-wrapper h1,
+section.parking-wrapper h1,
 section.location h1, p {
     color: black;
+
 }
 
 section#meet {
@@ -628,7 +657,7 @@ section#meet {
     padding: 5rem 0;
 }
 
-p.our-bolder {
+p.our-bolder ,.bolder{
     font-weight: 600;
 }
 
@@ -730,10 +759,7 @@ p.our-bolder {
 /*=========start events and news page*/
 
 
-
-
-
-section.events-header{
+section.events-header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -763,7 +789,7 @@ section.events {
 
 /*==========OUR PLACE ==============*/
 
-.page-template-template-our-place section.Our-Place{
+.page-template-template-our-place section.Our-Place {
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -771,20 +797,216 @@ section.events {
     height: 90vh;
 }
 
-section.Our-Place-wrapper{
+section.Our-Place-wrapper {
     padding: 4rem 0;
 }
 
-section.Our-Place-wrapper h1{
+section.Our-Place-wrapper h1 {
     color: black;
 }
 
+.Private {
+    height: 80vh;
+    padding: 4rem;
+}
+.private-title h2{
+    font-size: 45px;
+}
+.private-content{
+    margin: 1.5em 0;
+}
+.private-content p{
+    color: white;
+}
+
+.corporate-left-wrapper h2 {
+    color: black;
+}
+
+.corporate-icon {
+    display: block;
+    width: 370px;
+    position: relative;
+}
+
+.reserve-text {
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    transform:translate(-50%, -50%);
+    top:50%;
+}
+.flex-form{
+    display: flex;
+    padding: 1rem 0;
+}
+.flex-left{
+    margin-right: 40px;
+}
+.flex-right{
+    margin-left: 40px;
+}
+
+.flex-form label{
+    width: 100%;
+}
+
+.flex-form input,textarea{
+    background: inherit;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color: inherit;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.corporate-form .instructions{
+    display: block;
+    width: 500px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+
+}
+.flex-form textarea:last-child{
+    height: 80px;
+}
+
+.corporate-left-wrapper{
+    padding: 20px;
+    margin-right: 25px;
+}
+.corporate-left-wrapper h2{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
 
 /*============FIND UD ================*/
 
-.page-template-template-findus section.find-Us{
+.page-template-template-findus section.find-Us {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     height: 90vh;
 }
+
+section.bg-wall {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.page-template-template-findus input, textarea {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color: inherit;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.page-template-template-findus form span {
+    margin: 0;
+}
+
+.page-template-template-findus form p {
+    font-weight: 600;
+}
+
+.page-template-template-findus textarea {
+    height: 40px;
+    border-bottom: 2px solid;
+}
+
+.no-outline:focus {
+    outline: none;
+}
+
+.page-template-template-findus .content-flexbox {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    padding-top: 2em;
+}
+
+.page-template-template-findus label {
+    width: 100%;
+}
+
+.page-template-template-findus .content-flexbox h1 {
+    margin-bottom: 10px;
+}
+
+.content-flexbox form p:nth-child(2) {
+    margin: 0;
+}
+
+.content-flexbox p.form {
+    margin: 3em 0;
+}
+
+.content-flexbox .flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-flexbox .flex p:first-child {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.flex p:last-child input[type=submit] {
+    border-top: solid !important;
+    border-left: solid;
+    border-right: solid;
+    border-bottom: solid;
+    background: #FF2219;
+    color: white;
+    padding: 0.6em 3em;
+    text-transform: uppercase;
+}
+
+.maps-content.inner {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    /*justify-content: center;*/
+}
+
+section.maps .phone {
+    display: flex;
+    flex-direction: column;
+}
+
+.maps-content.inner p, span {
+    color: white;
+    font-weight: 100;
+    margin: 0 0 5px 0;
+
+}
+
+.maps-content.inner p:last-child {
+    color: white;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.maps-content.inner .phone {
+    margin-bottom: 30px;
+}
+
+.maps-content.inner h2 {
+    font-size: 42px;
+}
+
+.maps-content.inner p.area {
+    margin-bottom: 15px;
+}
+
+section.parking-wrapper.bg-wall {
+    padding: 3rem 0;
+}
+
+/*end of FIND US PAGE*/
+

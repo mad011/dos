@@ -77,14 +77,14 @@ get_header();
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img class="d-block w-100"
-                                 src="http://localhost/Mariz/wp-content/themes/dos/images/Photo_slider.png"
+                                 src="<?php echo get_stylesheet_directory_uri(); ?>/images/Photo_slider.png"
                                  alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="..." alt="Second slide">
+                            <img class="d-block w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/images/Photo_slider.png" alt="Second slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="..." alt="Third slide">
+                            <img class="d-block w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/images/Photo_slider.png" alt="Third slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -143,15 +143,15 @@ get_header();
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="../wp-content/themes/dos/images/banner_prive_photo.jpg"
+                            <img class="d-block w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/images/Photo_slider.png/images/banner_prive_photo.jpg"
                                  alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="../wp-content/themes/dos/images/banner_prive_photo.jpg"
+                            <img class="d-block w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/images/Photo_slider.png/images/banner_prive_photo.jpg"
                                  alt="Second slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="../wp-content/themes/dos/images/banner_prive_photo.jpg"
+                            <img class="d-block w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/images/Photo_slider.png/images/banner_prive_photo.jpg"
                                  alt="Third slide">
                         </div>
                     </div>
@@ -201,7 +201,7 @@ get_header();
             <div class="col-12 col-lg-8 mt-5 p-lg-0">
                 <div class="corporate-form-contact">
                     <div class="corporate-icon">
-                        <img class="img-fluid" src="../wp-content/themes/dos/images/bg_title_yellow.png">
+                        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/images/Photo_slider.png/images/bg_title_yellow.png">
                         <div class="reserve-text">
                             <h2>Reservation Form</h2>
                         </div>

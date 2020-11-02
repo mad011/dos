@@ -29,7 +29,7 @@ get_header();
 
                 <div class="col-lg-7 p-0">
                     <div class="image-flexbox">
-                        <img class="img-fluid w-100" src="../wp-content/themes/dos/images/photo_form.jpg">
+                        <img class="img-fluid w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/images/photo_form.jpg">
                     </div>
                 </div>
 

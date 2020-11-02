@@ -15,7 +15,7 @@ get_header();
                     <div class="flex-our">
 
                         <h1>Our story</h1>
-                        <p class="our-bolder">
+                        <p class="our-bolder bold">
                             Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
                             of
                             classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a

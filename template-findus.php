@@ -6,97 +6,139 @@
 get_header();
 
 ?>
-    <section class="find-Us"
-             style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/header_photo_findus.jpg);"></section>
+<?php if ( have_rows( 'header' ) ) : ?>
+	<?php while ( have_rows( 'header' ) ) :	the_row(); ?>
+		
+		<?php $background = get_sub_field( 'background' ); ?>
+
+		<?php if ( $background ) : ?>
+
+            <section class="find-Us" style="background-image: url(<?php echo wp_get_attachment_url( $background ); ?>);"></section>
+
+        <?php endif; ?>
+
+	<?php endwhile; ?>
+<?php endif; ?>
 
 
-    <section class="find-Us-wrapper bg-wall"
-             style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/bg_wall.jpg);">
-        <div class="container-fluid">
-            <div class="row">
+<?php if ( have_rows( 'contact_form' ) ) : ?>
+	<?php while ( have_rows( 'contact_form' ) ) : the_row(); ?>
 
-                <div class="col-lg-4 offset-lg-1 mt-5 pr-5">
-                    <div class="content-flexbox">
-                        <h1>CONTACT US</h1>
-                        <p class="form">Send us a message and we'll get back to you as soon as possible.<br>You can also
-                            reach us by phone at +30 210 8087906
-                            Looking forward to hearing from you.
-                        </p>
-                        <?php echo do_shortcode('[contact-form-7 id="38" title="Contact form 1"]'); ?>
+        <?php
+        $background = get_sub_field( 'background' );
+        $title = get_sub_field( 'title' );
+        $sub_title = get_sub_field( 'sub_title' );
+        $right_image = get_sub_field( 'right_image' );
+        ?>
+        <section class="find-Us-wrapper bg-wall" style="background-image: url(<?php echo wp_get_attachment_url( $background ); ?>);">
+            <div class="container-fluid">
+                <div class="row">
 
-                    </div>
-                </div>
+                    <div class="col-lg-4 offset-lg-1 mt-5 pr-5">
+                        <div class="content-flexbox">
 
-                <div class="col-lg-7 p-0">
-                    <div class="image-flexbox">
-                        <img class="img-fluid w-100" src="<?php echo get_stylesheet_directory_uri(); ?>/images/photo_form.jpg">
-                    </div>
-                </div>
+                            <?php if ( $title ) : ?>
+                                <h1><?php echo $title; ?></h1>
+                            <?php endif; ?>
 
+                            <?php if ( $sub_title ) : ?>
+                                <p class="form">
+                                    <?php echo $sub_title; ?>
+                                </p>
+                            <?php endif; ?>
 
-            </div>
-
-
-        </div>
-
-    </section>
-    <section class="maps"
-             style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/images/banner_bg_prive.jpg);">
-        <div class="container-fluid">
-            <div class="row">
-
-                <div class="col-lg-6">
-                    <div class="d-flex justify-content-center">
-                        <img src="../wp-content/themes/dos/images/map.png">
-                    </div>
-                </div>
-
-                <div class="col-lg-6 pt-5 mt-5">
-
-                    <div class="maps-content inner">
-                        <h2>Dos Hermanos | Mexican Cuisine</h2>
-
-                        <p class="maps wrapper">Κυριαζή 24 | Κηφισιά | Τ.Κ 145 62</p>
-                        <p class="area">Αθήνα | Ελλάδα</p>
-                        <div class="phone">
-                            <span>+30 210 8087906</span>
-                            <span>+30 210 8087906</span>
-                            <span>info@doshermanos.gr</span>
+                            <?php echo do_shortcode('[contact-form-7 id="38" title="Contact form 1"]'); ?>
 
                         </div>
+                    </div>
+                    
+                    <?php if ( $right_image ) : ?>
+                        <div class="col-lg-7 p-0">
+                            <div class="image-flexbox">
+                                <?php echo wp_get_attachment_image( $right_image, 'full', false, array('class'=>'img-fluid w-100') ); ?>
+                            </div>
+                        </div>
+                    <?php endif; ?>
 
-                        <h2>HOW TO GET THERE</h2>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been
-                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley
-                            of type and scrambled it to make a type specimen book. It has survived not only five
-                            centuries,
-                            but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                            popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                            passages,
-                            and more recently with desktop publishing software like Aldus PageMaker including versions
-                            of
-                            Lorem Ipsum.
-                        </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+	<?php endwhile; ?>
+<?php endif; ?>
+
+
+<?php if ( have_rows( 'map' ) ) : ?>
+	<?php while ( have_rows( 'map' ) ) : the_row(); ?>
+
+        <?php
+        $background = get_sub_field( 'background' );
+        $map_image = get_sub_field( 'map_image' );
+        $content = get_sub_field( 'content' );
+        ?>
+
+        <section class="maps" style="background-image:url(<?php echo wp_get_attachment_url( $background ); ?>);">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-lg-6">
+                        <div class="d-flex justify-content-center">
+                            <?php if ( $map_image ) : ?>
+                                <?php echo wp_get_attachment_image( $map_image, 'full' ); ?>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 pt-5 mt-5">
+
+                        <?php if ( $content ) : ?>
+                            <div class="maps-content inner">
+                                <?php echo $content; ?>
+                            </div>
+                        <?php endif; ?>                       
+
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="parking-wrapper bg-wall"
-             style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/bg_wall.jpg);">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-6">
-                    <div class="content-flexbox">
-                        <h1>CAR PARKING</h1>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </section>
+
+	<?php endwhile; ?>
+<?php endif; ?>
+
+<?php if ( have_rows( 'car_parking' ) ) : ?>
+	<?php while ( have_rows( 'car_parking' ) ) : the_row(); ?>
+
+        <?php
+        $background = get_sub_field( 'background' );
+        $title = get_sub_field( 'title' );
+        $sub_title = get_sub_field( 'sub_title' );
+        ?>
+
+        <section class="parking-wrapper bg-wall" style="background-image: url(<?php echo wp_get_attachment_url( $background ); ?>">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-6">
+                        <div class="content-flexbox">
+
+                            <?php if ( $title ) : ?>
+                                <h1><?php echo esc_html( $title ); ?></h1>
+                            <?php endif; ?>
+
+                            <?php if ( $sub_title ) : ?>
+                                <?php echo $sub_title; ?>
+                            <?php endif; ?>
+
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+	<?php endwhile; ?>
+<?php endif; ?>
 
 <?php get_footer();

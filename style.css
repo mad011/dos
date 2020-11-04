@@ -1010,3 +1010,16 @@ section.parking-wrapper.bg-wall {
 
 /*end of FIND US PAGE*/
 
+
+
+/************Page Menu Eat **************** */
+section.Eat {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 90vh;
+}
+
+
+
+

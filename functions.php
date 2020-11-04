@@ -16,8 +16,6 @@ if (!function_exists('wpbootstrap_enqueue_styles')) {
 
         define('BOOTSTRAP_VERSION', '4.5.3');
 
-        wp_enqueue_style('my-style', get_template_directory_uri() . '/style.css');
-
         $theme_file_uri = get_theme_file_uri();
 
         wp_register_style('bootstrap', $theme_file_uri . '/assets/bootstrap/bootstrap.min.css', array(), BOOTSTRAP_VERSION);

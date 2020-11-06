@@ -552,25 +552,29 @@ footer#colophon .flexbox-container2 ul#menu-footer li > a:last-child {
 }
 
 @media screen and (max-width: 768px) {
-    section.Corporate .corporate-form .instructions
-    {
+    section.Corporate .corporate-form .instructions {
         width: 100%;
     }
-    .corporate-form-contact  .corporate-icon{
+
+    .corporate-form-contact .corporate-icon {
         width: 100%;
     }
-    .corporate-icon h2{
+
+    .corporate-icon h2 {
         font-size: 28px;
     }
+
     .flex-form {
         display: flex;
         flex-direction: column;
     }
-    .flex-form .flex-right{
+
+    .flex-form .flex-right {
         margin-left: 0;
         padding: 10px;
     }
-    .flex-left{
+
+    .flex-left {
         margin: 0;
         display: flex;
         flex-direction: column;
@@ -657,7 +661,7 @@ section#meet {
     padding: 5rem 0;
 }
 
-p.our-bolder ,.bolder{
+p.our-bolder, .bolder {
     font-weight: 600;
 }
 
@@ -777,7 +781,11 @@ section.events {
 
 }
 
-
+.event-tabs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .event-tabs li {
     padding: 1rem;
 }
@@ -809,13 +817,16 @@ section.Our-Place-wrapper h1 {
     height: 80vh;
     padding: 4rem;
 }
-.private-title h2{
+
+.private-title h2 {
     font-size: 45px;
 }
-.private-content{
+
+.private-content {
     margin: 1.5em 0;
 }
-.private-content p{
+
+.private-content p {
     color: white;
 }
 
@@ -833,25 +844,28 @@ section.Our-Place-wrapper h1 {
     position: absolute;
     left: 50%;
     width: 50%;
-    transform:translate(-50%, -50%);
-    top:50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
 }
-.flex-form{
+
+.flex-form {
     display: flex;
     padding: 1rem 0;
 }
-.flex-left{
+
+.flex-left {
     margin-right: 40px;
 }
-.flex-right{
+
+.flex-right {
     margin-left: 40px;
 }
 
-.flex-form label{
+.flex-form label {
     width: 100%;
 }
 
-.flex-form input,textarea{
+.flex-form input, textarea {
     background: inherit;
     border-top-style: hidden;
     border-right-style: hidden;
@@ -861,22 +875,25 @@ section.Our-Place-wrapper h1 {
     width: 100%;
     margin-bottom: 20px;
 }
-.corporate-form .instructions{
+
+.corporate-form .instructions {
     display: block;
     width: 500px;
     margin-top: 25px;
     margin-bottom: 30px;
 
 }
-.flex-form textarea:last-child{
+
+.flex-form textarea:last-child {
     height: 80px;
 }
 
-.corporate-left-wrapper{
+.corporate-left-wrapper {
     padding: 20px;
     margin-right: 25px;
 }
-.corporate-left-wrapper h2{
+
+.corporate-left-wrapper h2 {
     font-size: 40px;
     margin-bottom: 30px;
 }
@@ -894,6 +911,12 @@ section.bg-wall {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    position: relative;
+    z-index: 8;
+    top: -18px;
+    margin-bottom: -15px;
+    padding: 4rem 0;
+
 }
 
 .page-template-template-findus input, textarea {
@@ -1012,15 +1035,138 @@ section.parking-wrapper.bg-wall {
 /*end of FIND US PAGE*/
 
 
-
 /************Page Menu Eat **************** */
-section.Eat {
+section.Eat,section.Drink {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     height: 90vh;
 }
 
+section.Eat_Sub_Menu,section.Drink_Sub_Menu {
+    background-position-y: bottom;
+}
+
+img.center {
+    display: block;
+    margin: 0 auto;
+
+}
+
+section.Eat_Sub_Menu div#nav-tab {
+    border: none;
+    margin-bottom: 35px;
+}
+
+.center-image {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    bottom: 95px;
+}
+
+a#nav-home-tab {
+    border-right: 3px solid white;
+}
+
+div#nav-tab a {
+    display: flex ;
+    flex-direction: column;
+    background: inherit ;
+    border: none;
+    position: relative;
+}
+
+div#nav-tab a > img {
+    object-fit: contain;
+}
+
+div#nav-tab a:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    border-right: 2px solid #fff;
+    min-height: 65px;
+}
+
+.image-flexbox {
+    position: relative;
+}
+
+.inside {
+    display: flex;
+    position: absolute;
+    top: 50%; /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+
+    transform: translate(-50%, -50%);
+/
+}
+
+.inside h2.food {
+    color: #DF3E23;
+    font-size: 40px;
+}
+
+section.Eat_Sub_Menu {
+    position: relative;
+    z-index: 9;
+}
+
+section.Food-wrapper {
+    position: relative;
+    z-index: 8;
+    top: -18px;
+    margin-bottom: -15px;
+    padding: 4rem 0;
+}
+
+.flex-content-food {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.flex-content-food p {
+    text-align: center;
+    padding: 1rem 0 0 0 ;
+    margin-bottom: 5px;
+}
 
 
+h3.food-title {
+    color: black;
+    position: relative;
+}
 
+h3.food-title::after {
+    content: "";
+    height: 0.1em;
+    width: 80px;
+    background-color: #EB6852;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 45px;
+}
+.flex-content-food .food_price span{
+    color: #CD533A;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.flex-content-food .image{
+    margin-top: 30px;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+
+}
+
+section.Drink_Sub_Menu .center-image{
+    bottom: 290px;
+}

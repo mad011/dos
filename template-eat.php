@@ -1,7 +1,9 @@
 <?php
-/* Template Name: Page Eat */
+/* Template Name: Eat - Food */
 get_header();
 ?>
+
+
     <section class="Eat"
              style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/header_cusina_photo.jpg);"></section>
     <section class="Eat_Sub_Menu"
@@ -52,15 +54,17 @@ get_header();
             </div>
         </div>
     </section>
-    <section class="Food-wrapper"
-             style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/images/bg_wall.jpg)">
+
+    <section class="Food-wrapper" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/images/bg_wall.jpg)">
         <div class="container">
-            <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
-                     aria-labelledby="nav-home-tab">
+
+            <div id="nav-tabContent" class="tab-content py-3 px-3 px-sm-0">
+
+                <div id="nav-home" class="tab-pane fade show active" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="row">
 
-                        <div class="col-lg-6">
+                        <div class="col-12 column-1-2-md">
+
                             <div class="image-flexbox">
                                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/paper_title_images.png">
                                 <div class="inside">
@@ -68,7 +72,8 @@ get_header();
                                     <h2 class="food">ENSALADAS</h2>
                                 </div>
                             </div>
-                            <div class="flex-content-food">
+
+                           <div class="flex-content-food">
                                 <h3 class="food-title">Cactus Salad</h3>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                     Ipsum has been the industry's standard dummy text ever since the 1500s, when an
@@ -92,9 +97,6 @@ get_header();
                                 </div>
 
                             </div>
-                        </div>
-
-                        <div class="col-lg-6 mt-5">
                             <div class="flex-content-food">
                                 <h3 class="food-title">Cactus Salad</h3>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
@@ -109,11 +111,6 @@ get_header();
                                     <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/images/plate_01photo.jpg">
                                 </div>
                             </div>
-
-                        </div>
-                    </div>
-                    <div class="row mt-4">
-                        <div class="col-lg-6">
                             <div class="flex-content-food">
                                 <h3 class="food-title">Cactus Salad</h3>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
@@ -125,60 +122,59 @@ get_header();
                                     <span>9.5e</span>
                                 </div>
 
+                                <div class="image">
+                                    <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/images/plate_02photo.jpg">
+                                </div>
+
                             </div>
-                            <div class="image">
-                                <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/images/plate_02photo.jpg">
+
+                            <div class="flex-content-food">
+                                <h3 class="food-title">Mango</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+                                </p>
+                                <div class="food_price">
+                                    <span>9.5e</span>
+                                </div>
+
                             </div>
+                            <div class="flex-content-food">
+                                <h3 class="food-title">Mango</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+                                </p>
+                                <div class="food_price">
+                                    <span>9.5e</span>
+                                </div>
+
+                            </div>
+                            <div class="flex-content-food">
+                                <h3 class="food-title">Mango</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+                                </p>
+                                <div class="food_price">
+                                    <span>9.5e</span>
+                                </div>
+
+                            </div>                                                                               
 
                         </div>
-
-                        <div class="col-lg-6">
-                            <div class="flex-content-food">
-                                <h3 class="food-title">Mango</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-
-                                </p>
-                                <div class="food_price">
-                                    <span>9.5e</span>
-                                </div>
-
-                            </div>
-
-                            <div class="flex-content-food">
-                                <h3 class="food-title">Mango</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-
-                                </p>
-                                <div class="food_price">
-                                    <span>9.5e</span>
-                                </div>
-
-                            </div>
-
-                            <div class="flex-content-food">
-                                <h3 class="food-title">Mango</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-
-                                </p>
-                                <div class="food_price">
-                                    <span>9.5e</span>
-                                </div>
-
-                            </div>
-                        </div>
-
 
                     </div>
 
 
                 </div>
-                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+
+
+                <div id="nav-profile" class="tab-pane fade" role="tabpanel" aria-labelledby="nav-profile-tab">
                     <div class="row">
                         <div class="col-lg-6">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
@@ -204,7 +200,8 @@ get_header();
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+
+                <div id="nav-contact" class="tab-pane fade" role="tabpanel" aria-labelledby="nav-contact-tab">
                     <div class="row">
                         <div class="col-lg-6">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
@@ -230,7 +227,8 @@ get_header();
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+
+                <div id="nav-about" class="tab-pane fade" role="tabpanel" aria-labelledby="nav-about-tab">
                     <div class="row">
                         <div class="col-lg-6">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
@@ -256,9 +254,12 @@ get_header();
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
     </section>
+
+
 <?php
 get_footer();

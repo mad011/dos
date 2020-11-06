@@ -1101,7 +1101,6 @@ div#nav-tab a:not(:last-child)::after {
     left: 50%; /* position the left edge of the element at the middle of the parent */
 
     transform: translate(-50%, -50%);
-/
 }
 
 .inside h2.food {
@@ -1169,4 +1168,29 @@ h3.food-title::after {
 
 section.Drink_Sub_Menu .center-image{
     bottom: 290px;
+}
+
+/* UIKIT Column Count */
+[class*='column-'] {
+  column-gap: 30px;
+}
+/* Desktop and bigger */
+@media (min-width: 1200px) {
+  [class*='column-'] {
+    column-gap: 40px;
+  }
+}
+
+/*
+ * Fix image 1px line wrapping into the next column in Chrome
+ */
+[class*='column-'] img {
+  transform: translate3d(0, 0, 0);
+}
+
+/* Phone landscape and bigger */
+@media (min-width: 992px) {
+  .column-1-2-md {
+    column-count: 2;
+  }
 }

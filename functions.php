@@ -9,14 +9,12 @@
 
 if (!defined('_S_VERSION')) {
     // Replace the version number of the theme on each release.
-    define('_S_VERSION', '1.0.0');
+    define('_S_VERSION', '1.1.0');
 }
 if (!function_exists('wpbootstrap_enqueue_styles')) {
     function wpbootstrap_enqueue_styles() {
 
         define('BOOTSTRAP_VERSION', '4.5.3');
-
-        wp_enqueue_style('my-style', get_template_directory_uri() . '/style.css');
 
         $theme_file_uri = get_theme_file_uri();
 

@@ -41,7 +41,8 @@ if ( !function_exists( 'create_events' ) ) {
                 'title',
                 'editor',
                 'page-attributes',
-                'revisions'
+                'revisions',
+                'thumbnail'
             )
         );
 

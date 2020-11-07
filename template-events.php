@@ -4,17 +4,33 @@
 /* Template Name: Events */
 
 get_header();
-?>
-<section class="events-header" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/header_photo_event.png);">
-</section>
 
-<section class="events" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/bg_drink.png);">
+?>
+
+<?php if ( have_rows( 'header' ) ) : ?>
+	<?php while ( have_rows( 'header' ) ) : the_row(); ?>
+		
+		<?php $background = get_sub_field( 'background' ); ?>
+
+		<?php if ( $background ) : ?>
+            <section class="events-header" style="background-image: url(<?php echo wp_get_attachment_url( $background, 'full' ); ?>)">
+            </section>
+        <?php endif; ?>
+
+	<?php endwhile; ?>
+<?php endif; ?>
+
+<?php $tab_button_section = get_field( 'tab_button_section' ); ?>
+
+<section class="events" style="background-image: url(<?php echo wp_get_attachment_url( $tab_button_section['background_image'], 'full' ); ?>);">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
 
                 <div id="inside" class="text-center">
-                    <img class="img-fluid w-10="src="<?php echo get_stylesheet_directory_uri(); ?>/images/title_lastevent.png">
+
+                    <?php echo wp_get_attachment_image( $tab_button_section['main_image'], 'full', false, array('class'=>'img-fluid') ) ?>
+
                 </div>
                 <div class="event-tabs">
                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -41,8 +57,9 @@ get_header();
     </div>
 </section>
 
+<?php $posts_news = get_field( 'posts_news' ); ?>
 
-<section class="event-bg bg-wall" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/bg_wall.jpg);">
+<section class="event-bg bg-wall" style="background-image: url(<?php echo wp_get_attachment_url( $posts_news['background_image'], 'full' ); ?>);">
     <div class="container">
         <div class="row">
             <div class="tab-content" id="pills-tabContent">
@@ -72,7 +89,7 @@ get_header();
                                     </div>
                                     <div class="wrapper box describe">
                                         
-                                        <img class="img-fluid w-10="src="<?php echo get_stylesheet_directory_uri(); ?>/images/paper_bg_title_news.png">
+                                         <?php echo wp_get_attachment_image( $posts_news['post_title_background'], 'full', false, array('class'=>'img-fluid') ) ?>
 
                                         <?php the_title('<h3 class="title">', '</h3>'); ?>
                                     </div>

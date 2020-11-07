@@ -1,264 +1,158 @@
 <?php
 /* Template Name: Eat - Food */
 get_header();
+     
+$args = array(
+    'taxonomy' => 'eat_category',
+    'include' => get_field( 'order_food_categories' ),
+    'orderby' => 'include',
+);
+
+$eat_categories = get_terms( $args );
 ?>
 
+<?php if ( have_rows( 'header' ) ) : ?>
+	<?php while ( have_rows( 'header' ) ) :	the_row(); ?>
 
-    <section class="Eat"
-             style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/header_cusina_photo.jpg);"></section>
-    <section class="Eat_Sub_Menu"
-             style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/images/BACKROUND_ypomenou.png);">
+		<?php $background_image = get_sub_field( 'background_image' ); ?>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 ">
-                    <div class="center-image">
-                        <img class="center"
-                             src="<?php echo get_stylesheet_directory_uri(); ?>/images/title_authenticmexicancusine.png">
-                    </div>
+        <section class="Eat" style="background-image: url(<?php echo wp_get_attachment_url( $background_image, 'full' ); ?>)">
+        </section>
+
+	<?php endwhile; ?>
+<?php endif; ?>
+
+
+
+<?php $tab_section = get_field( 'tab_section' )  ?>
+
+<section class="Eat_Sub_Menu" style="background-image:url(<?php echo wp_get_attachment_url( $tab_section['background_image'], 'full' ); ?>);">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 ">
+                <div class="center-image">
+                    <?php echo wp_get_attachment_image( $tab_section['main_image'], 'full', false, array('class'=>'center') ) ?>
+                </div>
+
+                <?php if( $eat_categories ) : ?>
+                    
+                    <?php $i = 0; ?>
 
                     <nav>
                         <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                            <a class="nav-item nav-link active" id="nav-home-tab flex" data-toggle="tab"
-                               href="#nav-home"
-                               role="tab" aria-controls="nav-ensa" aria-selected="true">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/salad_on.png">
-                                ENSALADAS</a>
-                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
-                               role="tab" aria-controls="nav-aperi" aria-selected="false">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/salad_on.png">
-                                APERITIVOS</a>
-                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
-                               role="tab" aria-controls="nav-especial" aria-selected="false">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/salad_on.png">
-                                ESPECIALIZED DE LA CASA</a>
-                            <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about"
-                               role="tab" aria-controls="nav-parilla" aria-selected="false">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/salad_on.png">
-                                DE LA PARILLA GRILL</a>
-                            <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about"
-                               role="tab" aria-controls="nav-parilla" aria-selected="false">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/salad_on.png">
-                                A LA CARTE EXTRA</a>
-                            <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about"
-                               role="tab" aria-controls="nav-parilla" aria-selected="false">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/salad_on.png">
-                                PAIRING COMBO MENU</a>
-                            <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about"
-                               role="tab" aria-controls="nav-parilla" aria-selected="false">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/salad_on.png">
-                                DULCES</a>
+
+                            <?php foreach ( $eat_categories as $eat_category ) : ?>
+                                <a class="text-center nav-item nav-link <?php echo $i == 0 ? 'active' : ''; ?>" data-toggle="tab" href="#nav-<?php echo $eat_category->slug; ?>" role="tab" aria-controls="nav-ensa" aria-selected="true">
+                                    <?php echo wp_get_attachment_image( get_field( 'feature_image', $eat_category->taxonomy . '_' . $eat_category->term_id ), 'full', false, array('style'=>'height:50px') ); ?>
+                                    <?php echo $eat_category->name; ?>
+                                </a>
+                                <?php $i++; ?>
+                            <?php endforeach; ?>
+
                         </div>
                     </nav>
-                </div>
+
+                <?php endif; ?>
+
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="Food-wrapper" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/images/bg_wall.jpg)">
+
+
+<?php if( $eat_categories ) : ?>
+
+    <?php $menu_section = get_field( 'menu_section' )  ?>    
+    
+    <?php $i = 0; ?>
+
+    <section class="Food-wrapper" style="background-image:url(<?php echo wp_get_attachment_url( $menu_section['background_image'], 'full' ); ?>)">
         <div class="container">
 
             <div id="nav-tabContent" class="tab-content py-3 px-3 px-sm-0">
 
-                <div id="nav-home" class="tab-pane fade show active" role="tabpanel" aria-labelledby="nav-home-tab">
-                    <div class="row">
+                <?php foreach ( $eat_categories as $eat_category ) : ?>
+                
+                    <div id="nav-<?php echo $eat_category->slug; ?>" class="tab-pane fade show <?php echo $i == 0 ? 'active' : ''; ?>" role="tabpanel" aria-labelledby="nav-<?php echo $eat_category->slug; ?>-tab">
+                        <div class="row">
 
-                        <div class="col-12 column-1-2-md">
+                            <?php 
 
-                            <div class="image-flexbox">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/paper_title_images.png">
-                                <div class="inside">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/salad_on.png">
-                                    <h2 class="food">ENSALADAS</h2>
-                                </div>
-                            </div>
+                            $args = array(
+                                'post_type' => 'food',
+                                'posts_per_page' => -1,
+                                'tax_query' => array(
+                                    array(
+                                        'taxonomy' => 'eat_category',
+                                        'field' => 'slug',
+                                        'terms' => $eat_category->slug,
+                                    )
+                                )
+                            );
 
-                           <div class="flex-content-food">
-                                <h3 class="food-title">Cactus Salad</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            $foods_query = new WP_Query( $args ); ?>
 
-                                </p>
-                                <div class="food_price">
-                                    <span>9.5e</span>
-                                </div>
+                            <?php if ( $foods_query->have_posts() ) : ?>
 
-                            </div>
-                            <div class="flex-content-food">
-                                <h3 class="food-title">Cactus Salad</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                <div class="col-12 column-1-2-md">
 
-                                </p>
-                                <div class="food_price">
-                                    <span>9.5e</span>
-                                </div>
+                                    <div class="image-flexbox">
+                                        <?php echo wp_get_attachment_image( $menu_section['title_background'], 'full' ) ?>
+                                        <div class="inside">
+                                            
+                                            <?php echo wp_get_attachment_image( $menu_section['left_title_image'], 'full' ) ?>
+                                            
+                                            <h2 class="food"><?php echo $eat_category->name; ?></h2>
+                                        </div>
+                                    </div>
 
-                            </div>
-                            <div class="flex-content-food">
-                                <h3 class="food-title">Cactus Salad</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    <?php while ( $foods_query->have_posts() ) : $foods_query->the_post(); ?>
 
-                                </p>
-                                <div class="food_price">
-                                    <span>9.5e</span>
-                                </div>
-                                <div class="image">
-                                    <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/images/plate_01photo.jpg">
-                                </div>
-                            </div>
-                            <div class="flex-content-food">
-                                <h3 class="food-title">Cactus Salad</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                        <div class="flex-content-food">
+                                        
+                                            <?php the_title( '<h3 class="food-title">', '</h3>') ?>
+                                            
+                                            <?php the_content(); ?>
 
-                                </p>
-                                <div class="food_price">
-                                    <span>9.5e</span>
+                                            <div class="food_price">
+                                                <span><?php echo '&euro; ' . number_format_i18n( get_field( 'price' ), 2 ); ?></span>
+                                            </div>
+
+                                            <?php if( get_field( 'show_feature_image' ) && has_post_thumbnail() ) :?>
+                                                <div class="image">
+                                                    <?php the_post_thumbnail( 'post-thumbnail', array('class'=>'img-fluid') ) ?>
+                                                </div>
+                                            <?php endif; ?>
+
+                                        </div>
+
+                                    <?php endwhile; ?>                                                                            
+
                                 </div>
 
-                                <div class="image">
-                                    <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/images/plate_02photo.jpg">
-                                </div>
+                                <?php wp_reset_postdata(); ?>
 
-                            </div>
-
-                            <div class="flex-content-food">
-                                <h3 class="food-title">Mango</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-
-                                </p>
-                                <div class="food_price">
-                                    <span>9.5e</span>
-                                </div>
-
-                            </div>
-                            <div class="flex-content-food">
-                                <h3 class="food-title">Mango</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-
-                                </p>
-                                <div class="food_price">
-                                    <span>9.5e</span>
-                                </div>
-
-                            </div>
-                            <div class="flex-content-food">
-                                <h3 class="food-title">Mango</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-
-                                </p>
-                                <div class="food_price">
-                                    <span>9.5e</span>
-                                </div>
-
-                            </div>                                                                               
+                            <?php endif; ?>
 
                         </div>
 
                     </div>
 
+                    <?php $i++; ?>
+                <?php endforeach; ?>
 
-                </div>
 
 
 
-                <div id="nav-profile" class="tab-pane fade" role="tabpanel" aria-labelledby="nav-profile-tab">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                            Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                            unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            It has survived not only five centuries, but also the leap into electronic
-                            typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                            the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                            with desktop publishing software like Aldus PageMaker including versions of Lorem
-                            Ipsum.
-                        </div>
-
-                        <div class="col-lg-6">
-
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                            Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                            unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            It has survived not only five centuries, but also the leap into electronic
-                            typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                            the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                            with desktop publishing software like Aldus PageMaker including versions of Lorem
-                            Ipsum.
-                        </div>
-                    </div>
-                </div>
-
-                <div id="nav-contact" class="tab-pane fade" role="tabpanel" aria-labelledby="nav-contact-tab">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                            Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                            unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            It has survived not only five centuries, but also the leap into electronic
-                            typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                            the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                            with desktop publishing software like Aldus PageMaker including versions of Lorem
-                            Ipsum.
-                        </div>
-
-                        <div class="col-lg-6">
-
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                            Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                            unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            It has survived not only five centuries, but also the leap into electronic
-                            typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                            the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                            with desktop publishing software like Aldus PageMaker including versions of Lorem
-                            Ipsum.
-                        </div>
-                    </div>
-                </div>
-
-                <div id="nav-about" class="tab-pane fade" role="tabpanel" aria-labelledby="nav-about-tab">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                            Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                            unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            It has survived not only five centuries, but also the leap into electronic
-                            typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                            the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                            with desktop publishing software like Aldus PageMaker including versions of Lorem
-                            Ipsum.
-                        </div>
-
-                        <div class="col-lg-6">
-
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                            Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                            unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            It has survived not only five centuries, but also the leap into electronic
-                            typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                            the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                            with desktop publishing software like Aldus PageMaker including versions of Lorem
-                            Ipsum.
-                        </div>
-                    </div>
-                </div>
 
             </div>
         </div>
 
     </section>
+
+<?php endif; ?>
 
 
 <?php

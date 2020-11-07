@@ -15,7 +15,7 @@ function console_log( $data ){
 
 if (!defined('_S_VERSION')) {
     // Replace the version number of the theme on each release.
-    define('_S_VERSION', '1.1.1');
+    define('_S_VERSION', '1.1.2');
 }
 if (!function_exists('wpbootstrap_enqueue_styles')) {
     function wpbootstrap_enqueue_styles() {
@@ -30,7 +30,11 @@ if (!function_exists('wpbootstrap_enqueue_styles')) {
         
         wp_enqueue_script('bootstrap', $theme_file_uri . '/assets/bootstrap/bootstrap.bundle.min.js', array('jquery'), BOOTSTRAP_VERSION, true);
 
-        wp_enqueue_script('jquery-ui-tabs');
+        wp_enqueue_script('main', $theme_file_uri . '/js/main.js', array('jquery'), '1.0.0', true);
+
+
+//        wp_enqueue_script('jquery-ui-tabs');
+
 
     }
 
